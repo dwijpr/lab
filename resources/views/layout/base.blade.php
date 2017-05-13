@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laravel</title>
         {{ Html::style('font-awesome/4.7.0/css/font-awesome.css') }}
+        {{ Html::style('bootstrap/3.3.7/dist/css/bootstrap.css') }}
         @include('layout.font')
         <style>
         @include('layout.base.style')
