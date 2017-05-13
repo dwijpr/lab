@@ -53,6 +53,9 @@
                                     <li>
                                     </li>
                                     <li>
+                                        Create new Github account
+                                    </li>
+                                    <li>
                                         Sample data structure for files storage
                                     </li>
                                 </ul>
