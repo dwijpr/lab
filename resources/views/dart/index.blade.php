@@ -8,7 +8,22 @@
         -
         mapping from layouts
         <ul>
-            <li>fonts</li>
+            <li></li>
+            <li>
+                Install <i>get</i>Bootstrap
+            </li>
+            <li>
+                Install laravelcollective HTML &amp; Form
+                <i class="fa fa-check"></i>
+            </li>
+            <li>
+                Install font awesome
+                <i class="fa fa-check"></i>
+            </li>
+            <li>
+                font
+                <i class="fa fa-check"></i>
+            </li>
         </ul>
     </li>
     <li>
