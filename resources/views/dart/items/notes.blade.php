@@ -53,11 +53,15 @@
                                     <li>
                                     </li>
                                     <li>
+                                        Design Dart Index
+                                    </li>
+                                    <li>
                                         Create new Github account
                                         <i class="fa fa-check text-success"></i>
                                     </li>
                                     <li>
                                         Sample data structure for files storage
+                                        <i class="fa fa-check text-success"></i>
                                     </li>
                                 </ul>
                             </td>

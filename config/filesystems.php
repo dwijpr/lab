@@ -43,6 +43,11 @@ return [
 
     'disks' => [
 
+        'dart' => [
+            'driver' => 'local',
+            'root' => resource_path('views/dart/items'),
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
