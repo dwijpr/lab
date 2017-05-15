@@ -15,6 +15,11 @@
     </head>
     <body>
         @yield('content')
+        <div class="text-center" style="padding-top: 32px;font-weight: normal;">
+            <a href="{{ url('/') }}">
+                {{ config('app.name') }}&copy;{{ date('Y') }}
+            </a>
+        </div>
         <script>
         @yield('script')
         </script>

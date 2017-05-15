@@ -58,7 +58,18 @@
                         <li>
                         </li>
                         <li>
+                            Create
+                            <a href="{{
+                                'https://www.oreilly.com/ideas/'.
+                                'on-becoming-a-web-artisan'
+                            }}" target="_blank">
+                                <b>Web Artisan</b>
+                            </a>
+                            Dart
+                        </li>
+                        <li>
                             Implement SQLite
+                            <i class="fa fa-check text-success"></i>
                         </li>
                         <li>
                             Nested Extend Layout
