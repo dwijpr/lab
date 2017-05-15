@@ -21,6 +21,7 @@
             {{ config('app.name') }}
         </div>
         <div class="links">
+            <a href="{{ url('/dart') }}">Dart</a>
             <a href="javascript:">Documentation</a>
             <a href="javascript:">GitHub</a>
         </div>
