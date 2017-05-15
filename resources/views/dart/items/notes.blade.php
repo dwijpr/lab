@@ -58,6 +58,9 @@
                         <li>
                         </li>
                         <li>
+                            Laravel Up and Running Dart
+                        </li>
+                        <li>
                             Create
                             <a href="{{
                                 'https://www.oreilly.com/ideas/'.
@@ -66,6 +69,7 @@
                                 <b>Web Artisan</b>
                             </a>
                             Dart
+                            <i class="fa fa-check text-success"></i>
                         </li>
                         <li>
                             Implement SQLite

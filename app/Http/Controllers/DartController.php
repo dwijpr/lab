@@ -28,7 +28,10 @@ class DartController extends Controller
         if (!@Storage::disk('dart')->exists($key.'.blade.php')) {
             return abort(404);
         }
-        return view('dart.items.'.$key);
+        $dart = Dart::where('key', $key)->get()->first();
+        return view('dart.items.'.$key, [
+            'dart' => $dart,
+        ]);
     }
 
     public function index() {
@@ -44,7 +47,7 @@ class DartController extends Controller
 
     function loadData() {
         $this->files = Storage::disk('dart')->files('/');
-        $this->darts = Dart::all(); 
+        $this->darts = Dart::orderBy('created_at', 'desc')->get(); 
         return count($this->files) === count($this->darts);
     }
 }

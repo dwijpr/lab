@@ -22,8 +22,7 @@
         </div>
         <div class="links">
             <a href="{{ url('/dart') }}">Dart</a>
-            <a href="javascript:">Documentation</a>
-            <a href="javascript:">GitHub</a>
+            <a href="https://github.com/owlpre/lab" target="_blank">GitHub</a>
         </div>
     </div>
 </div>

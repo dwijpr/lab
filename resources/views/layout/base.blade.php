@@ -15,7 +15,14 @@
     </head>
     <body>
         @yield('content')
-        <div class="text-center" style="padding-top: 32px;font-weight: normal;">
+        <div class="text-center" style="
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            padding-bottom: 16px;
+            font-weight: normal;
+        ">
+            <hr>
             <a href="{{ url('/') }}">
                 {{ config('app.name') }}&copy;{{ date('Y') }}
             </a>
