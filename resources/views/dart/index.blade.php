@@ -27,6 +27,9 @@
                 <a href="{{ url('/dart/'.$dart->key) }}">
                     {{ $dart->title }}
                 </a>
+                <a href="{{ url('/dart/'.$dart->id.'/edit') }}">
+                    <i class="fa fa-edit"></i>
+                </a>
             </li>
         @endforeach
     </ul>

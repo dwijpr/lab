@@ -20,3 +20,5 @@ Route::get('imagick', 'IMagickController@index');
 Route::get('dart', 'DartController@index');
 Route::get('dart/{key}', 'DartController@show');
 Route::post('dart/sync', 'DartController@sync');
+Route::get('dart/{dart}/edit', 'DartController@edit');
+Route::patch('dart/{dart}', 'DartController@update');

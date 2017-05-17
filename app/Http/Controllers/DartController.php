@@ -8,6 +8,20 @@ use App\Dart;
 
 class DartController extends Controller
 {
+    public function update(Dart $dart) {
+        $data = request()->all();
+        $dart->update([
+            'title' => @$data['title'],
+        ]);
+        return redirect('/dart');
+    }
+
+    public function edit(Dart $dart) {
+        return view('dart.edit', [
+            'dart' => $dart,
+        ]);
+    }
+
     public function sync() {
         if (!$this->loadData()) {
             foreach ($this->files as $file) {

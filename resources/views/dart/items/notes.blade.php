@@ -58,7 +58,15 @@
                         <li>
                         </li>
                         <li>
-                            Laravel Up and Running Dart
+                            <b>Dart</b> Laravel
+                        </li>
+                        <li>
+                            Editable title dart item
+                            <i class="fa fa-check text-success"></i>
+                        </li>
+                        <li>
+                            Lab Icon
+                            <i class="fa fa-check text-success"></i>
                         </li>
                         <li>
                             Create
