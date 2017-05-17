@@ -48,7 +48,14 @@
                     <ul>
                         <b>ToDo</b>
                         <li>
+                            Embed code in dart
+                        </li>
+                        <li>
+                            Auto detect extension file type
+                        </li>
+                        <li>
                             Install <b>highlight.js</b> syntax highlighter
+                            <i class="fa fa-check text-success"></i>
                         </li>
                         <li>
                             Setup prototype

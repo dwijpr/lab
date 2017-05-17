@@ -9,6 +9,7 @@
         {{ Html::style('font-awesome/4.7.0/css/font-awesome.css') }}
         {{ Html::style('bootstrap/3.3.7/dist/css/bootstrap.css') }}
         @include('layout.font')
+        @yield('head')
         <style>
         @include('layout.base.style')
         @yield('style')

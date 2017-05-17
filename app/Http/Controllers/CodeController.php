@@ -16,4 +16,12 @@ class CodeController extends Controller
             'files' => $files,
         ]);
     }
+
+    public function show($path) {
+        $file = Storage::get('/code/'.$path);
+        return view('code.show', [
+            'path' => $path,
+            'content' => $file,
+        ]);
+    }
 }
