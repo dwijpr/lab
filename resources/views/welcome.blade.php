@@ -22,6 +22,7 @@
         </div>
         <div class="links">
             <a href="{{ url('/dart') }}">Dart</a>
+            <a href="{{ url('/code') }}">Code</a>
             <a href="https://github.com/owlpre/lab" target="_blank">GitHub</a>
         </div>
     </div>

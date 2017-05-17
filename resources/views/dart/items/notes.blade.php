@@ -48,7 +48,11 @@
                     <ul>
                         <b>ToDo</b>
                         <li>
+                            Install <b>highlight.js</b> syntax highlighter
+                        </li>
+                        <li>
                             Setup prototype
+                            <i class="fa fa-check text-success"></i>
                         </li>
                     </ul>
                 </td>

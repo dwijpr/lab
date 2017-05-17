@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::get('imagick', 'IMagickController@index');
 
+Route::get('code', 'CodeController@index');
+
 Route::get('dart', 'DartController@index');
 Route::get('dart/{key}', 'DartController@show');
 Route::post('dart/sync', 'DartController@sync');
