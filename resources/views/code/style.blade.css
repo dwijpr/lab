@@ -26,6 +26,7 @@
 
 .editor .header {
     font-size: 12px;
+    font-weight: bold;
     overflow: auto;
     padding: 4px 16px;
 }
@@ -36,11 +37,11 @@
     border-radius: 50%;
 }
 
-pre code {
+.editor pre code {
     white-space: pre;
 }
 
-pre {
+.editor pre {
     margin: 0;
     padding: 0;
     border-radius: 0;

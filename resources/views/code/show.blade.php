@@ -19,19 +19,7 @@
 @endsection
 
 @section('content')
-<div class="editor-wrapper">
-    <div class="editor">
-        <div class="header">
-            {{ $path }}
-            <div class="pull-right">
-                <button class="btn btn-danger">
-                    <i class="fa fa-close"></i>
-                </button>
-            </div>
-        </div>
-        <div class="content">
-            <pre><code class="js">{!! $content !!}</code></pre>
-        </div>
-    </div>
-</div>
+{!! view('code.view', [
+    'path' => $path
+])->render() !!}
 @endsection

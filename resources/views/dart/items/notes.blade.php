@@ -49,9 +49,11 @@
                         <b>ToDo</b>
                         <li>
                             Embed code in dart
+                            <i class="fa fa-check text-success"></i>
                         </li>
                         <li>
                             Auto detect extension file type
+                            <i class="fa fa-check text-success"></i>
                         </li>
                         <li>
                             Install <b>highlight.js</b> syntax highlighter
@@ -87,6 +89,7 @@
                         </li>
                         <li>
                             <b>Dart</b> Laravel, composer
+                            <i class="fa fa-check text-success"></i>
                         </li>
                         <li>
                             Editable title dart item
