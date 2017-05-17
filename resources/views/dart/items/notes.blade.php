@@ -1,15 +1,6 @@
-@extends('layout.app')
+@extends('layout.dart')
 
-@section('breadcrumb')
-<ol class="breadcrumb">
-    <li><a href="{{ url('/') }}">Lab</a></li>
-    <li><a href="{{ url('/dart') }}">Dart</a></li>
-    <li class="active">Notes</li>
-</ol>
-@endsection
-
-@section('_content')
-<h1>Notes</h1>
+@section('__content')
 <ul>
     <li>
         <h2>
@@ -39,6 +30,32 @@
         </ul>
     </li>
     <li>
+        <h2>Create Code - write code</h2>
+        <table>
+            <tr>
+                <td style="vertical-align: top;">
+                    <ul>
+                        <b>Features</b>
+                        <li>
+                            Can be opened in Dart
+                        </li>
+                        <li>
+                            Multi language cover
+                        </li>
+                    </ul>
+                </td>
+                <td style="vertical-align: top;">
+                    <ul>
+                        <b>ToDo</b>
+                        <li>
+                            Setup prototype
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </li>
+    <li>
         <h2>Create Dart - to list all notes</h2>
         <table>
             <tr>
@@ -58,7 +75,7 @@
                         <li>
                         </li>
                         <li>
-                            <b>Dart</b> Laravel
+                            <b>Dart</b> Laravel, composer
                         </li>
                         <li>
                             Editable title dart item

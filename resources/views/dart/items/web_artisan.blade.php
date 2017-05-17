@@ -1,15 +1,6 @@
-@extends('layout.app')
+@extends('layout.dart')
 
-@section('breadcrumb')
-<ol class="breadcrumb">
-    <li><a href="{{ url('/') }}">Lab</a></li>
-    <li><a href="{{ url('/dart') }}">Dart</a></li>
-    <li class="active">{{ $dart->title }}</li>
-</ol>
-@endsection
-
-@section('_content')
-<h1>Web Artisan</h1>
+@section('__content')
 <blockquote>
     <p>
         The PHP Framework For <u>Web Artisan</u>s
