@@ -17,14 +17,15 @@
         </div>
     @endif
     <div class="content">
-        <div class="title m-b-md">
-            {{-- {{ config('app.name') }} --}}
-            {{ Html::image('/img/lab.gif') }}
-        </div>
         <div class="links">
+            <a href="{{ url('/todo') }}">ToDo</a>
             <a href="{{ url('/dart') }}">Dart</a>
             <a href="{{ url('/code') }}">Code</a>
             <a href="https://github.com/owlpre/lab" target="_blank">GitHub</a>
+        </div>
+        <div class="title m-b-md">
+            {{-- {{ config('app.name') }} --}}
+            {{ Html::image('/img/lab.gif') }}
         </div>
     </div>
 </div>
