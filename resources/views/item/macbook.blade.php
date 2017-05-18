@@ -1,6 +1,9 @@
-<div style="
-    width: 100%;
-">
+<div
+    class="hidden-xs"
+    style="
+        width: 100%;
+    "
+>
     <div style="
         margin: 0 auto;
         width: 694px;
@@ -20,4 +23,10 @@
             {!! $content !!}
         </div>
     </div>
+</div>
+
+<div
+    class="visible-xs"
+>
+    {!! $content !!}
 </div>

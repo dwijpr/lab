@@ -4,6 +4,14 @@
         Composer
         </a>
     </li>
-    <li>Installation</li>
-    <li>Resource Controller</li>
+    <li>
+        <a href="#installation">
+            Installation
+        </a>
+    </li>
+    <li>
+        <a href="#resource-controller">
+            Resource Controller
+        </a>
+    </li>
 </ul>

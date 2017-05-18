@@ -18,7 +18,8 @@
     @endif
     <div class="content">
         <div class="title m-b-md">
-            {{ config('app.name') }}
+            {{-- {{ config('app.name') }} --}}
+            {{ Html::image('/img/lab.gif') }}
         </div>
         <div class="links">
             <a href="{{ url('/dart') }}">Dart</a>
