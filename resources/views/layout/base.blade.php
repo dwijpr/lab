@@ -17,7 +17,7 @@
     </head>
     <body>
         @yield('content')
-        <div class="text-center" style="
+        <div id="footer" class="text-center" style="
             background: white;
             position: fixed;
             width: 100%;
@@ -30,6 +30,7 @@
                 {{ config('app.name') }}&copy;{{ date('Y') }}
             </a>
         </div>
+        {{ Html::script('/js/jquery-1.12.4.js') }}
         <script>
         @yield('script')
         </script>

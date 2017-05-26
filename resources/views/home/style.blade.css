@@ -1,0 +1,53 @@
+body {
+    font-family: monospace;
+    font-size: 12px;
+    background: #222;
+    color: #0F0;
+}
+
+#footer {
+    display: none;
+}
+
+#cmd.nokey.mode-command .cursor {
+    animation: 1s blink-block step-end infinite;
+}
+#cmd.nokey.mode-insert .cursor {
+    animation: 1s blink step-end infinite;
+}
+
+#cmd.mode-insert .cursor {
+    margin-right: -1px;
+    border-right: 1px solid #0F0;
+    background: transparent;
+}
+#cmd.mode-command .cursor {
+    background: #0F0;
+    color: #222;
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #0F0;
+    }
+}
+@keyframes blink-block {
+    from, to {
+        background: transparent;
+        color: #0F0;
+    }
+    50% {
+        background: #0F0;
+        color: #222;
+    }
+}
+
+#info {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #0F0;
+}
