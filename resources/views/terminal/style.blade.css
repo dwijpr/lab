@@ -1,0 +1,13 @@
+body {
+    font-family: monospace;
+    background: #222;
+    color: #0F0;
+}
+
+#footer {
+    display: none;
+}
+
+#terminal div.head, #terminal div.command {
+    display: inline;
+}

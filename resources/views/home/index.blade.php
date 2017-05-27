@@ -14,6 +14,9 @@
 ></div>
 <div id="info">
     mode: <span class="mode"></span>
+    <div class="pull-right">
+        <div class="saved-command" style="margin-right: 32px;"></div>
+    </div>
 </div>
 @endsection
 

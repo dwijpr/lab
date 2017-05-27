@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'TerminalController@index');
 
 Route::get('imagick', 'IMagickController@index');
 
