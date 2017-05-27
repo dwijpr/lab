@@ -11,3 +11,23 @@ body {
 #terminal div.head, #terminal div.command {
     display: inline;
 }
+
+#terminal div.command {
+    word-break: break-all;
+}
+
+#terminal div.command span.cursor {
+    display: inline-block;
+    position: relative;
+}
+#terminal div.command span.cursor span.cursor-content > span {
+    display: inline-block;
+    width: 0px;
+}
+#terminal div.command span.cursor i.cursor-mark {
+    position: absolute;
+    right: 0;
+    border-right: 1px solid #0F0;
+    width: 1px;
+    height: 100%;
+}

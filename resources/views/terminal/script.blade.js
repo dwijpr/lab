@@ -1,7 +1,10 @@
 var cursor = 0;
 var command = "";
 var terminal = $("#terminal");
-var cursorTemplate = "<i style='color: white;' class='fa fa-i-cursor'></i>";
+var cursorTemplate = "<span class='cursor'>"
+    + "<span class='cursor-content'>"
+    + "<span>&nbsp;</span></span>"
+    + "<i class='cursor-mark'></i></span>";
 
 String.prototype.insert = function (index, string) {
     if (index > 0) {
@@ -20,7 +23,7 @@ String.prototype.removeChar = function (index) {
     return this.substr(0, index) + this.substr(index + 1);
 };
 
-function draw(callback) {
+function draw() {
     var html = "";
     var i = 0;
     while (i < command.length) {
@@ -28,10 +31,12 @@ function draw(callback) {
         if (char == ' ') {
             char = '&nbsp;';
         }
-        html = html + char;
         if (i + 1 == cursor) {
-            html = html + cursorTemplate;
+            var el = $(cursorTemplate);
+            el.find(".cursor-content").html(char);
+            char = el.prop('outerHTML');
         }
+        html = html + char;
         i++;
     }
     if (cursor == 0) {
