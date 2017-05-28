@@ -25,6 +25,7 @@
             rows="1"
         ></textarea>
         <i
+            style="color: lime;"
             class="fa fa-terminal"
         ></i>
     </div>

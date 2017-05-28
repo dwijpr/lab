@@ -29,11 +29,7 @@ function output(value) {
 
 function executeCommand(command) {
     if (command == 'help') {
-        output("GNU bash, version 4.3.42(5)-release (x86_64-pc-msys)");
-        output("These shell commands are defined internally.  Type `help' to see this list.");
-        output("Type `help name' to find out more about the function `name'.");
-        output("Use `info bash' to find out more about the shell in general.");
-        output("Use `man -k' or `info' to find out more about commands not in this list.");
+        output("Web CLI ~ version 0.0.1");
     } else {
         output(command + " - command cannot be processed");
     }
