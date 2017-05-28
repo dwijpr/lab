@@ -37,3 +37,83 @@
     }
 @endforeach
 </style>
+
+
+<?php
+    $ubuntuMono = [
+        '400' => [
+            'normal' => 'R',
+            'italic' => 'RI',
+        ],
+        '700' => [
+            'normal' => 'B',
+            'italic' => 'BI',
+        ],
+    ];
+?>
+<style>
+@foreach ($ubuntuMono as $weight => $font)
+    <?php
+        $_font = is_array($font)?$font['normal']:$font;
+        $_fontItalic = is_array($font)?$font['italic']:($font.'Italic');
+    ?>
+    @font-face {
+        font-family: 'UbuntuMono';
+        src: url({{ asset(
+            '/font/ubuntu-font-family-0.83/UbuntuMono-'.$_font.'.ttf'
+        ) }});
+        font-weight: {{ $weight }};
+    }
+    @font-face {
+        font-family: 'UbuntuMono';
+        src: url({{ asset(
+            '/font/ubuntu-font-family-0.83/UbuntuMono-'.$_fontItalic.'.ttf'
+        ) }});
+        font-weight: {{ $weight }};
+        font-style: italic;
+    }
+@endforeach
+</style>
+
+<?php
+    $SourceCodePro = [
+        '200' => [
+            'normal' => 'ExtraLight',
+        ],
+        '300' => [
+            'normal' => 'Light',
+        ],
+        '400' => [
+            'normal' => 'Regular',
+        ],
+        '500' => [
+            'normal' => 'Medium',
+        ],
+        '600' => [
+            'normal' => 'SemiBold',
+        ],
+        '700' => [
+            'normal' => 'Bold',
+        ],
+        '800' => [
+            'normal' => 'ExtraBold',
+        ],
+        '900' => [
+            'normal' => 'Black',
+        ],
+    ];
+?>
+<style>
+@foreach ($SourceCodePro as $weight => $font)
+    <?php
+        $_font = is_array($font)?$font['normal']:$font;
+    ?>
+    @font-face {
+        font-family: 'SourceCodePro';
+        src: url({{ asset(
+            '/font/Source_Code_Pro/SourceCodePro-'.$_font.'.ttf'
+        ) }});
+        font-weight: {{ $weight }};
+    }
+@endforeach
+</style>

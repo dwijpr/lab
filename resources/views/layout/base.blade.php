@@ -31,6 +31,7 @@
             </a>
         </div>
         {{ Html::script('/js/jquery-1.12.4.js') }}
+        {{ Html::script('/autosize/dist/autosize.js') }}
         <script>
         @yield('script')
         </script>

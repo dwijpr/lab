@@ -1,81 +1,31 @@
-var cursor = 0;
-var command = "";
-var terminal = $("#terminal");
-var cursorTemplate = "<span class='cursor'>"
-    + "<span class='cursor-content'>"
-    + "<span>&nbsp;</span></span>"
-    + "<i class='cursor-mark'></i></span>";
-
-String.prototype.insert = function (index, string) {
-    if (index > 0) {
-        return this.substring(0, index)
-            + string + this.substring(index, this.length);
+$.fn.selectRange = function(start, end) {
+    if(end === undefined) {
+        end = start;
     }
-    else {
-        return string + this;
-    }
+    return this.each(function() {
+        if('selectionStart' in this) {
+            this.selectionStart = start;
+            this.selectionEnd = end;
+        } else if(this.setSelectionRange) {
+            this.setSelectionRange(start, end);
+        } else if(this.createTextRange) {
+            var range = this.createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', end);
+            range.moveStart('character', start);
+            range.select();
+        }
+    });
 };
 
-String.prototype.removeChar = function (index) {
-    if (index > this.length - 1) {
-        return this;
-    }
-    return this.substr(0, index) + this.substr(index + 1);
-};
+var command = $(".command");
 
-function draw() {
-    var html = "";
-    var i = 0;
-    while (i < command.length) {
-        var char = command[i];
-        if (char == ' ') {
-            char = '&nbsp;';
-        }
-        if (i + 1 == cursor) {
-            var el = $(cursorTemplate);
-            el.find(".cursor-content").html(char);
-            char = el.prop('outerHTML');
-        }
-        html = html + char;
-        i++;
-    }
-    if (cursor == 0) {
-        html = cursorTemplate + html;
-    }
-    terminal.find(".command").html(html);
-}
-
+autosize(command);
 $(document).keydown(function(e) {
     switch (e.key) {
-        case 'ArrowRight':
-            cursor = cursor + 1;
-            if (cursor >= command.length) {
-                cursor = command.length;
-            }
-            draw();
-            break;
-        case 'ArrowLeft':
-            cursor = cursor - 1;
-            if (cursor < 0) {
-                cursor = 0;
-            }
-            draw();
-            break;
         case 'Backspace':
-            cursor = cursor - 1;
-            command = command.removeChar(cursor);
-            if (cursor < 0) {
-                cursor = 0;
-            }
-            draw();
             break;
     }
 });
 
-$(document).keypress(function(e) {
-    command = command.insert(cursor, e.key);
-    cursor = cursor + 1;
-    draw();
-});
-
-draw();
+command.focus();
