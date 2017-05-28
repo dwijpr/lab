@@ -1,34 +1,50 @@
+<?php
+$todos = [
+    [
+        'title' => 'Implement <b>cd</b> command',
+        'done'  => false,
+    ],
+    [
+        'title' => 'ctrl + l to clear screen',
+        'done'  => true,
+    ],
+    [
+        'title' => 'List ToDo using variable',
+        'done'  => true,
+    ],
+    [
+        'title' => 'Implement <b>pwd</b> command',
+        'done'  => true,
+    ],
+    [
+        'title' => 'Connecting drive D: PC to jinny',
+        'done'  => true,
+    ],
+    [
+        'title' => 'Implement <b>ls</b> command',
+        'done'  => true,
+    ],
+    [
+        'title' => 'Refactor executeCommand()',
+        'done'  => true,
+    ],
+    [
+        'title' => 'Refactor command cannot be processed',
+        'done'  => true,
+    ],
+];
+?>
+
 var text = `
 <ul>
+    @foreach ($todos as $todo)
     <li>
-        ctrl + l to clear screen
+        {!! $todo['title'] !!}
+        @if ($todo['done'])
+            <i class="fa fa-check text-success"></i>
+        @endif
     </li>
-    <li>
-        List ToDo using variable
-    </li>
-    <li>
-        Implement <b>cd</b> command
-    </li>
-    <li>
-        Implement <b>pwd</b> command
-        <i class="fa fa-check text-success"></i>
-    </li>
-    <li>
-        Connecting drive D: PC to jinny
-        <i class="fa fa-check text-success"></i>
-    </li>
-    <li>
-        Implement <b>ls</b> command
-        <i class="fa fa-check text-success"></i>
-    </li>
-    <li>
-        Refactor executeCommand()
-        <i class="fa fa-check text-success"></i>
-    </li>
-    <li>
-        Refactor command cannot be processed
-        <i class="fa fa-check text-success"></i>
-    </li>
+    @endforeach
 </ul>
 `;
 output(text);

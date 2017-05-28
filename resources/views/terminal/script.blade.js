@@ -63,6 +63,13 @@ function Command() {
                 executeCommand($(this).val());
                 new Command();
                 break;
+            case 'l':
+                if (e.ctrlKey) {
+                    e.preventDefault();
+                    terminal.html("");
+                    new Command();
+                }
+                break;
         }
     });
     commandInput.focus();
