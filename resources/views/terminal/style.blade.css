@@ -9,12 +9,28 @@ body {
     display: none;
 }
 
-.command-wrapper {
+.template {
+    display: none;
+}
+
+.command {
     position: relative;
 }
 
-.command-wrapper > i {
+.command > i {
     position: absolute;
-    top: 4px;
+    top: 3px;
     left: 0px;
+}
+
+.command .command-input {
+    position: relative;
+    width: 100%;
+    background: #222;
+    word-break: break-all;
+    outline: none;
+    border: none;
+    resize: none;
+    padding: 0;
+    padding-left: 16px;
 }

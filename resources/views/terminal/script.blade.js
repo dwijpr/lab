@@ -18,14 +18,24 @@ $.fn.selectRange = function(start, end) {
     });
 };
 
-var command = $(".command");
+var terminal = $("#terminal");
+var commandTemplate = $(".command");
 
-autosize(command);
-$(document).keydown(function(e) {
-    switch (e.key) {
-        case 'Backspace':
-            break;
-    }
-});
+function Command() {
+    var command = commandTemplate.clone();
+    var commandInput = command.find(".command-input");
+    terminal.append(command);
+    autosize(commandInput);
+    commandInput.keydown(function(e) {
+        switch (e.key) {
+            case 'Enter':
+                e.preventDefault();
+                new Command();
+                break;
+        }
+    });
+    commandInput.focus();
+    console.log(commandInput, commandInput.val());
+}
 
-command.focus();
+new Command();
