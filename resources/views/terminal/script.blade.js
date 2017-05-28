@@ -27,6 +27,15 @@ function output(value) {
     terminal.append(div);
 }
 
+function unknownCommand(command) {
+    var text = `
+        Sorry, I can't understand 
+        <b class='text-danger'>` + command + `</b>
+        :(
+    `;
+    output(text);
+}
+
 function executeCommand(command) {
     var commands = [
         'help', 'todo', 'ls'
@@ -44,7 +53,7 @@ function executeCommand(command) {
                 break;
         }
     } else {
-        output(command + " - command cannot be processed");
+        unknownCommand(command);
     }
 }
 
