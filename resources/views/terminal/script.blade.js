@@ -29,7 +29,7 @@ function output(value) {
 
 function executeCommand(command) {
     if (command == 'help') {
-        output("Web CLI ~ version 0.0.1");
+        output("jinny version 0.0.1");
     } else {
         output(command + " - command cannot be processed");
     }
