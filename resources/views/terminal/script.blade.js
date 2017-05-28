@@ -1,6 +1,13 @@
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
 var terminal = $("#terminal");
 var commandTemplate = $(".command");
 var directory = '/';
+var token = '{{ csrf_token() }}';
 
 function output(value) {
     var div = $("<div></div>");
@@ -23,6 +30,7 @@ $commands = [
     'todo'  => 'list of todo',
     'pwd'   => 'Print the name of the current working directory',
     'ls'    => 'Display directory stack',
+    'cd'    => 'Change the shell working directory',
 ];
 ?>
 
