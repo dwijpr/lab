@@ -1,1 +1,1 @@
-output("--- not implemented");
+output(directory);
