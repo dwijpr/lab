@@ -8,21 +8,16 @@ var version = {
 };
 var text = `
 <span class="text-primary">jinny</span> version ` + version.toString() + `
-<br>
+<br><br>
 list of available commands:
-<ul>
-    <li>
-        <b>help</b>
-        - showing this information
-    </li>
-    <li>
-        <b>todo</b>
-        - list of todo
-    </li>
-    <li>
-        <b>ls</b>
-        - print out current directory items
-    </li>
-</ul>
+<br><br>
+<table>
+    @foreach($commands as $command => $desc)
+    <tr>
+        <td style="padding-right: 8px;"><b>{{ $command }}</b></td>
+        <td>- {{ $desc }}</td>
+    </tr>
+    @endforeach
+</table>
 `;
 output(text);

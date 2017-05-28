@@ -37,3 +37,6 @@ $(function() {
 @include('terminal.script')
 });
 @endsection
+
+<?php
+?>

@@ -36,21 +36,24 @@ function unknownCommand(command) {
     output(text);
 }
 
+<?php
+$commands = [
+    'help'  => 'Display this information',
+    'todo'  => 'list of todo',
+    'pwd'   => 'Print the name of the current working directory',
+    'ls'    => 'Display directory stack',
+];
+?>
+
 function executeCommand(command) {
-    var commands = [
-        'help', 'todo', 'ls'
-    ];
+    var commands = <?=json_encode(array_keys($commands))?>;
     if (commands.indexOf(command) != -1) {
         switch (command) {
-            case 'help':
-                @include('terminal.script.command.help');
+            @foreach ($commands as $command => $desc)
+            case '{{ $command }}':
+                @include('terminal.script.command.'.$command);
                 break;
-            case 'todo':
-                @include('terminal.script.command.todo');
-                break;
-            case 'ls':
-                @include('terminal.script.command.ls');
-                break;
+            @endforeach
         }
     } else {
         unknownCommand(command);
@@ -72,7 +75,6 @@ function Command() {
         }
     });
     commandInput.focus();
-    console.log(commandInput, commandInput.val());
 }
 
 new Command();
