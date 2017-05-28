@@ -20,6 +20,8 @@ function unknownCommand(command) {
         Sorry, I can't understand 
         <b class='text-danger'>` + command + `</b>
         :(
+        <br>
+        try <span class="text-info">help</span>
     `;
     output(text);
 }

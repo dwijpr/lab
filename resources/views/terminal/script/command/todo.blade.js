@@ -1,6 +1,12 @@
 var text = `
 <ul>
     <li>
+        ctrl + l to clear screen
+    </li>
+    <li>
+        List ToDo using variable
+    </li>
+    <li>
         Implement <b>cd</b> command
     </li>
     <li>

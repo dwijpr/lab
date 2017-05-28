@@ -9,7 +9,7 @@
     <div class="row">
         <div
             style="
-                padding-top: 64px;
+                padding-top: 8px;
             "
             class="col-sm-12 col-md-8 col-md-offset-2"
         >
