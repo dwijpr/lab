@@ -28,12 +28,21 @@ function output(value) {
 }
 
 function executeCommand(command) {
-    if (command == 'help') {
-        @include('terminal.script.command.help');
-    } else if (command == 'todo') {
-        @include('terminal.script.command.todo');
-    } else if (command == 'ls') {
-        @include('terminal.script.command.ls');
+    var commands = [
+        'help', 'todo', 'ls'
+    ];
+    if (commands.indexOf(command) != -1) {
+        switch (command) {
+            case 'help':
+                @include('terminal.script.command.help');
+                break;
+            case 'todo':
+                @include('terminal.script.command.todo');
+                break;
+            case 'ls':
+                @include('terminal.script.command.ls');
+                break;
+        }
     } else {
         output(command + " - command cannot be processed");
     }
