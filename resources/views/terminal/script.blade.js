@@ -27,7 +27,7 @@ function unknownCommand(command) {
 }
 
 <?php
-$commands = [
+$programs = [
     'help'  => 'Display this information',
     'todo'  => 'list of todo',
     'pwd'   => 'Print the name of the current working directory',
@@ -37,12 +37,21 @@ $commands = [
 ?>
 
 function executeCommand(command) {
-    var commands = <?=json_encode(array_keys($commands))?>;
-    if (commands.indexOf(command) != -1) {
-        switch (command) {
-            @foreach ($commands as $command => $desc)
-            case '{{ $command }}':
-                @include('terminal.script.command.'.$command);
+    var programs = <?=json_encode(array_keys($programs))?>;
+    var parts = command.split(/\s+/);
+    var args = [];
+    for (var i = 0;i < parts.length;i++) {
+        if (i == 0) {
+            var program = parts[i];
+        } else {
+            args.push(parts[i]);
+        }
+    }
+    if (programs.indexOf(program) != -1) {
+        switch (program) {
+            @foreach ($programs as $program => $desc)
+            case '{{ $program}}':
+                @include('terminal.script.program.'.$program);
                 break;
             @endforeach
         }

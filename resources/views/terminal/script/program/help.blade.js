@@ -12,9 +12,9 @@ var text = `
 list of available commands:
 <br><br>
 <table>
-    @foreach($commands as $command => $desc)
+    @foreach($programs as $program => $desc)
     <tr>
-        <td style="padding-right: 8px;"><b>{{ $command }}</b></td>
+        <td style="padding-right: 8px;"><b>{{ $program }}</b></td>
         <td>- {{ $desc }}</td>
     </tr>
     @endforeach
