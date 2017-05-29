@@ -10,6 +10,7 @@ class TerminalController extends Controller
     var $path = "/var/www/data";
 
     public function ls() {
+        $onlyDir = @request()->onlyDir;
         $directory = request()->directory;
         $path = $this->path.$directory;
         $items = scandir($path);
@@ -23,7 +24,16 @@ class TerminalController extends Controller
             $item->path = $_path;
             $item->pathinfo = pathinfo($_path);
             $item->isDir = is_dir($_path);
+            if (!$item->isDir and $onlyDir) {
+                continue;
+            }
             $_items[] = $item;
+        }
+
+        if ($onlyDir) {
+            return response()->json([
+                'directories' => $_items,
+            ]);
         }
         $view = view('template.ls', [
             'items' => $_items,

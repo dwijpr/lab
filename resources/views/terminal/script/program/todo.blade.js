@@ -1,8 +1,12 @@
 <?php
 $todos = [
     [
-        'title' => 'Implement <b>cd</b> command',
+        'title' => '<b>cd</b> upper directory',
         'done'  => false,
+    ],
+    [
+        'title' => 'Implement <b>cd</b> command',
+        'done'  => true,
     ],
     [
         'title' => 'ctrl + l to clear screen',
