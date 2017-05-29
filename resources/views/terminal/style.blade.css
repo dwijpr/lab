@@ -9,6 +9,10 @@ body {
     display: none;
 }
 
+.container-fluid > .row > .col-sm-12 {
+    padding-top: 8px;
+}
+
 .template {
     display: none;
 }
@@ -21,6 +25,7 @@ body {
     position: absolute;
     top: 15px;
     left: 0px;
+    color: lime;
 }
 
 .command .command-input {

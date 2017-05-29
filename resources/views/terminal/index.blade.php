@@ -5,29 +5,17 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div
-            style="
-                padding-top: 8px;
-            "
-            class="col-sm-12 col-md-8 col-md-offset-2"
-        >
+        <div class="col-sm-12">
             <div id="terminal"></div>
         </div>
     </div>
 </div>
 <div class="template">
     <div class="command">
-        <textarea
-            class="command-input"
-            spellcheck="false"
-            rows="1"
-        ></textarea>
-        <i
-            style="color: lime;"
-            class="fa fa-terminal"
-        ></i>
+        <textarea class="command-input" spellcheck="false" rows="1"></textarea>
+        <i class="fa fa-terminal"></i>
     </div>
 </div>
 @endsection
@@ -37,6 +25,3 @@ $(function() {
 @include('terminal.script')
 });
 @endsection
-
-<?php
-?>
