@@ -7,14 +7,15 @@ $.ajax({
     url: "/terminal",
     data: {
         onlyDir: true,
-        directory: directory
+        directory: directory.toString()
     },
     async: false,
     success: function(data) {
         var found = false;
+        var dest = args[0];
         for (var i = 0;i < data.directories.length;i++) {
-            if (args[0] == data.directories[i].name) {
-                directory = directory + args[0] + '/';
+            if (dest == data.directories[i].name) {
+                directory.change(dest);
                 found = true;
                 break;
             }

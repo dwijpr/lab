@@ -14,7 +14,9 @@ class TerminalController extends Controller
         $directory = request()->directory;
         $path = $this->path.$directory;
         $items = scandir($path);
-        $items = array_diff($items, ['.', '..']);
+        if (!$onlyDir) {
+            $items = array_diff($items, ['.', '..']);
+        }
         $items = array_values($items);
         $_items = [];
         foreach ($items as $i => $value) {

@@ -6,7 +6,20 @@ $.ajaxSetup({
 
 var terminal = $("#terminal");
 var commandTemplate = $(".command");
-var directory = '/';
+var directory = {
+    segments: ['/'],
+    change: function(dest) {
+        if (dest == '..' && this.segments.length > 1) {
+            this.segments.pop();
+        } else if (dest == '.') {
+        } else if (dest != '..') {
+            this.segments.push(dest);
+        }
+    },
+    toString: function() {
+        return this.segments.join('/').replace(/\/\/+/g, '/');
+    }
+};
 var token = '{{ csrf_token() }}';
 
 function output(value) {

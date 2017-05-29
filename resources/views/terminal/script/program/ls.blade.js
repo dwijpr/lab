@@ -2,7 +2,7 @@ $.ajax({
     type: 'POST',
     url: "/terminal",
     data: {
-        directory: directory
+        directory: directory.toString()
     },
     async: false,
     success: function(data) {

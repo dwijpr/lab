@@ -1,8 +1,12 @@
 <?php
 $todos = [
     [
-        'title' => '<b>cd</b> upper directory',
+        'title' => '[tab] cd directory completion',
         'done'  => false,
+    ],
+    [
+        'title' => '<b>cd</b> upper directory',
+        'done'  => true,
     ],
     [
         'title' => 'Implement <b>cd</b> command',
