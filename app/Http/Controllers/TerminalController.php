@@ -7,7 +7,8 @@ use stdClass;
 
 class TerminalController extends Controller
 {
-    var $path = "/var/www/data";
+    // var $path = "/var/www/data"; // if using docker
+    var $path = "D:/data";
 
     public function ls() {
         $onlyDir = @request()->onlyDir;

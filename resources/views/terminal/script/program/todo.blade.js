@@ -1,16 +1,16 @@
 <?php
 $todos = [
     [
-        'title' => 'Change platform to XAMPP as service',
-        'done'  => false,
-    ],
-    [
         'title' => '[tab] cd directory completion',
         'done'  => false,
     ],
     [
         'title' => 'dynamic <b>ToDo</b> management',
         'done'  => false,
+    ],
+    [
+        'title' => 'Change platform to XAMPP as service',
+        'done'  => true,
     ],
     [
         'title' => '<b>cd</b> upper directory',
