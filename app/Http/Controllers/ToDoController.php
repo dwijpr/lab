@@ -7,6 +7,24 @@ use App\ToDo;
 
 class ToDoController extends Controller
 {
+    public function undone($id) {
+        return $this->_done($id, true);
+    }
+
+    public function done($id) {
+        return $this->_done($id);
+    }
+
+    function _done($id, $revert = false) {
+        $todo = ToDo::findOrFail($id);
+        $response = [
+            'success' => true,
+        ];
+        $todo->update([
+            'done' => $revert?false:true,
+        ]);
+        return response()->json($response);
+    }
     /**
      * Display a listing of the resource.
      *

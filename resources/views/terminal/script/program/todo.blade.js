@@ -1,8 +1,26 @@
 var command = args[0];
-if (command == 'delete') {
+if (command == 'done' || command == 'undone') {
     var id = args[1];
     if (!id) {
-        output('Please describe your ToDo ID 2<sup>nd</sup> argument');
+        output('Please describe your ToDo ID in the 2<sup>nd</sup> argument');
+    } else {
+        $.ajax({
+            type: 'POST',
+            url: "/todo/" + command + "/" + id,
+            async: false,
+            success: function(data) {
+                if (data.success) {
+                    output('ToDo Updated!');
+                } else {
+                    output('Error updating ToDo: ' + data.message);
+                }
+            }
+        });
+    }
+} else if (command == 'delete') {
+    var id = args[1];
+    if (!id) {
+        output('Please describe your ToDo ID in the 2<sup>nd</sup> argument');
     } else {
         $.ajax({
             type: 'DELETE',
@@ -20,7 +38,7 @@ if (command == 'delete') {
 } else if (command == 'create') {
     var desc = args[1];
     if (!desc) {
-        output('Please describe your ToDo using 2<sup>nd</sup> argument');
+        output('Please describe your ToDo ID in the 2<sup>nd</sup> argument');
     } else {
         if (
             (desc[0] == '"' || desc[0] == "'")
