@@ -7,69 +7,6 @@ use App\ToDo;
 
 class ToDoController extends Controller
 {
-    var $todos = [
-        [
-            'title' => '<b>ToDo</b> model and database',
-            'done'  => false,
-        ],
-        [
-            'title' => 'dynamic <b>ToDo</b> management',
-            'done'  => true,
-        ],
-        [
-            'title' => 'list git bash terminal shortcut',
-            'done'  => false,
-        ],
-        [
-            'title' => 'bug fix: cd video - cd ..',
-            'done'  => true,
-        ],
-        [
-            'title' => '[tab] as item completion',
-            'done'  => true,
-        ],
-        [
-            'title' => 'Change platform to XAMPP as service',
-            'done'  => true,
-        ],
-        [
-            'title' => '<b>cd</b> upper directory',
-            'done'  => true,
-        ],
-        [
-            'title' => 'Implement <b>cd</b> command',
-            'done'  => true,
-        ],
-        [
-            'title' => 'ctrl + l to clear screen',
-            'done'  => true,
-        ],
-        [
-            'title' => 'List ToDo using variable',
-            'done'  => true,
-        ],
-        [
-            'title' => 'Implement <b>pwd</b> command',
-            'done'  => true,
-        ],
-        [
-            'title' => 'Connecting drive D: PC to jinny',
-            'done'  => true,
-        ],
-        [
-            'title' => 'Implement <b>ls</b> command',
-            'done'  => true,
-        ],
-        [
-            'title' => 'Refactor executeCommand()',
-            'done'  => true,
-        ],
-        [
-            'title' => 'Refactor command cannot be processed',
-            'done'  => true,
-        ],
-    ];
-
     /**
      * Display a listing of the resource.
      *
@@ -77,9 +14,11 @@ class ToDoController extends Controller
      */
     public function index()
     {
-        $todos = ToDo::all();
+        $options = @request()->options;
+        $todos = ToDo::orderBy('updated_at', 'desc')->get();
         $view = view('template.todo', [
             'items' => $todos,
+            'options' => @$options,
         ])->render();
         return response()->json([
             'view' => $view,
@@ -105,15 +44,15 @@ class ToDoController extends Controller
     public function store(Request $request)
     {
         $response = [
-            'error' => true,
+            'message' => 'initial',
         ];
-        $title = $request->title;
+        $title = $request->desc;
         $todo = ToDo::create([
             'title' => $title,
         ]);
         if ($todo) {
             $response = [
-                'created' => true,
+                'success' => true,
             ];
         }
         return response()->json($response);
@@ -138,7 +77,6 @@ class ToDoController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**
@@ -161,6 +99,15 @@ class ToDoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $todo = ToDo::findOrFail($id);
+        $response = [
+            'message' => 'initial',
+        ];
+        if ($todo->delete()) {
+            $response = [
+                'success' => true,
+            ];
+        }
+        return response()->json($response);
     }
 }
