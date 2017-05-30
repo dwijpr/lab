@@ -5,12 +5,12 @@ $todos = [
         'done'  => false,
     ],
     [
-        'title' => 'bug fix: cd video - cd ..',
+        'title' => 'list git bash terminal shortcut',
         'done'  => false,
     ],
     [
-        'title' => 'list git bash terminal shortcut',
-        'done'  => false,
+        'title' => 'bug fix: cd video - cd ..',
+        'done'  => true,
     ],
     [
         'title' => '[tab] as item completion',

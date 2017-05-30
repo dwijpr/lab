@@ -22,12 +22,14 @@ class TerminalController extends Controller
         $items = array_values($items);
         $_items = [];
         foreach ($items as $i => $value) {
-            $item = new stdClass;
+            $__path = $path.'/'.$value;
+            $value = utf8_encode($value);
             $_path = $path.'/'.$value;
+            $item = new stdClass;
             $item->name = $value;
             $item->path = $_path;
             $item->pathinfo = pathinfo($_path);
-            $item->isDir = is_dir($_path);
+            $item->isDir = is_dir($__path);
             if (!$item->isDir and $onlyDir) {
                 continue;
             }
