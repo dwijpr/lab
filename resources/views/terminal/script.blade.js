@@ -51,7 +51,7 @@ $programs = [
 
 function executeCommand(command) {
     var programs = <?=json_encode(array_keys($programs))?>;
-    var parts = command.split(/\s+/);
+    var parts = command.match(/[^\s"']+|"([^"]*)"|'([^']*)'/g);
     var args = [];
     for (var i = 0;i < parts.length;i++) {
         if (i == 0) {

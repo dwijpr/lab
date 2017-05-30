@@ -1,3 +1,4 @@
+@if (count($items))
 <ul>
     @foreach ($items as $todo)
     <li>
@@ -8,3 +9,6 @@
     </li>
     @endforeach
 </ul>
+@else
+No ToDo Found! Start by creating one
+@endif

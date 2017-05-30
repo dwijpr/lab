@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ToDo;
 
 class ToDoController extends Controller
 {
@@ -69,15 +70,6 @@ class ToDoController extends Controller
         ],
     ];
 
-    public function ls() {
-        $view = view('template.todo', [
-            'items' => $this->todos,
-        ])->render();
-        return response()->json([
-            'view' => $view,
-        ]);
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -85,7 +77,13 @@ class ToDoController extends Controller
      */
     public function index()
     {
-        //
+        $todos = ToDo::all();
+        $view = view('template.todo', [
+            'items' => $todos,
+        ])->render();
+        return response()->json([
+            'view' => $view,
+        ]);
     }
 
     /**
@@ -106,7 +104,19 @@ class ToDoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $response = [
+            'error' => true,
+        ];
+        $title = $request->title;
+        $todo = ToDo::create([
+            'title' => $title,
+        ]);
+        if ($todo) {
+            $response = [
+                'created' => true,
+            ];
+        }
+        return response()->json($response);
     }
 
     /**

@@ -13,7 +13,7 @@
 
 Route::get('/', 'TerminalController@index');
 
-Route::post('/todo', 'ToDoController@ls');
+Route::resource('/todo', 'ToDoController');
 
 Route::post('/terminal', 'TerminalController@ls');
 
