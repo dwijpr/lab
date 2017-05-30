@@ -80,6 +80,9 @@ function Command() {
     autosize(commandInput);
     commandInput.keydown(function(e) {
         switch (e.key) {
+            case 'Tab':
+                @include('terminal.script.keydown.tab')
+                break;
             case 'Enter':
                 e.preventDefault();
                 executeCommand($(this).val());

@@ -1,12 +1,20 @@
 <?php
 $todos = [
     [
-        'title' => '[tab] cd directory completion',
+        'title' => 'dynamic <b>ToDo</b> management',
         'done'  => false,
     ],
     [
-        'title' => 'dynamic <b>ToDo</b> management',
+        'title' => 'bug fix: cd video - cd ..',
         'done'  => false,
+    ],
+    [
+        'title' => 'list git bash terminal shortcut',
+        'done'  => false,
+    ],
+    [
+        'title' => '[tab] as item completion',
+        'done'  => true,
     ],
     [
         'title' => 'Change platform to XAMPP as service',

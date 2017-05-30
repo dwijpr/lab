@@ -11,6 +11,7 @@ class TerminalController extends Controller
     var $path = "D:/data";
 
     public function ls() {
+        $list = @request()->list;
         $onlyDir = @request()->onlyDir;
         $directory = request()->directory;
         $path = $this->path.$directory;
@@ -33,9 +34,9 @@ class TerminalController extends Controller
             $_items[] = $item;
         }
 
-        if ($onlyDir) {
+        if ($onlyDir or $list) {
             return response()->json([
-                'directories' => $_items,
+                'items' => $_items,
             ]);
         }
         $view = view('template.ls', [

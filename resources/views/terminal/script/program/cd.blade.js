@@ -13,8 +13,9 @@ $.ajax({
     success: function(data) {
         var found = false;
         var dest = args[0];
-        for (var i = 0;i < data.directories.length;i++) {
-            if (dest == data.directories[i].name) {
+        var directories = data.items;
+        for (var i = 0;i < directories.length;i++) {
+            if (dest == directories[i].name) {
                 directory.change(dest);
                 found = true;
                 break;
