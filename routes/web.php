@@ -13,6 +13,8 @@
 
 Route::get('/', 'TerminalController@index');
 
+Route::post('/todo', 'ToDoController@ls');
+
 Route::post('/terminal', 'TerminalController@ls');
 
 Route::get('imagick', 'IMagickController@index');
