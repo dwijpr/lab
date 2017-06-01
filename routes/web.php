@@ -17,6 +17,9 @@ Route::resource('/todo', 'ToDoController');
 Route::post('/todo/done/{todo}', 'ToDoController@done');
 Route::post('/todo/undone/{todo}', 'ToDoController@undone');
 
+Route::get(
+    '/terminal/data{path}', 'TerminalController@data'
+)->where('path', '(.*)');
 Route::post('/terminal', 'TerminalController@ls');
 Route::post('/terminal/readme', 'TerminalController@readme');
 

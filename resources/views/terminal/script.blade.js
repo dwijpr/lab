@@ -63,6 +63,7 @@ $programs = [
     'pwd'   => 'Print the name of the current working directory',
     'ls'    => 'Display directory stack',
     'cd'    => 'Change the shell working directory',
+    'play'  => 'Run multimedia file, like video or audio file',
 ];
 ?>
 

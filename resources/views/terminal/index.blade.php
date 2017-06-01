@@ -17,6 +17,10 @@
         <textarea class="command-input" spellcheck="false" rows="1"></textarea>
         <i class="fa fa-terminal"></i>
     </div>
+    <audio class="play-audio" controls>
+        <source>
+        Your browser does not support the audio element.
+    </audio>
 </div>
 @endsection
 

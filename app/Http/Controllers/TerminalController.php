@@ -10,6 +10,10 @@ class TerminalController extends Controller
     // var $path = "/var/www/data"; // if using docker
     var $path = "D:/data";
 
+    public function data($path) {
+        return response()->file($this->path.$path);
+    }
+
     public function readme() {
         $directory = request()->directory;
         $path = $this->path.$directory;
@@ -47,7 +51,10 @@ class TerminalController extends Controller
             $value = utf8_encode($value);
             $_path = $path.'/'.$value;
             $item = new stdClass;
-            $item->name = $value;
+            $item->name = addslashes($value);
+            if (preg_match('/\s/',$item->name)) {
+                $item->name = "'" . $item->name ."'";
+            }
             $item->path = $_path;
             $item->pathinfo = pathinfo($_path);
             $item->isDir = is_dir($__path);
