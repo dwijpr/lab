@@ -10,6 +10,26 @@ class TerminalController extends Controller
     // var $path = "/var/www/data"; // if using docker
     var $path = "D:/data";
 
+    public function readme() {
+        $directory = request()->directory;
+        $path = $this->path.$directory;
+        $readme = glob($path.'readme.*');
+        if (!empty($readme)) {
+            $readme = $readme[0];
+            $content = file_get_contents($readme);
+            if (pathinfo($readme)['extension'] == 'txt') {
+                $content = nl2br($content);
+            }
+            $response = [
+                'exists' => true,
+                'view' => view('template.readme', [
+                    'content' => $content,
+                ])->render(),
+            ];
+        }
+        return response()->json(@$response?:false);
+    }
+
     public function ls() {
         $list = @request()->list;
         $onlyDir = @request()->onlyDir;

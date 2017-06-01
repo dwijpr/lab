@@ -28,6 +28,22 @@ function output(value) {
     terminal.append(div);
 }
 
+function readme() {
+    $.ajax({
+        type: 'POST',
+        url: "terminal/readme",
+        data: {
+            directory: directory.toString()
+        },
+        async: false,
+        success: function(data) {
+            if (data.exists) {
+                output(data.view);
+            }
+        }
+    });
+}
+
 function unknownCommand(command) {
     var text = `
         Sorry, I can't understand 
@@ -100,4 +116,5 @@ function Command() {
     commandInput.focus();
 }
 
+readme();
 new Command();

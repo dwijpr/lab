@@ -18,6 +18,7 @@ Route::post('/todo/done/{todo}', 'ToDoController@done');
 Route::post('/todo/undone/{todo}', 'ToDoController@undone');
 
 Route::post('/terminal', 'TerminalController@ls');
+Route::post('/terminal/readme', 'TerminalController@readme');
 
 Route::get('imagick', 'IMagickController@index');
 
