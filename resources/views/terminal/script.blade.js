@@ -15,9 +15,10 @@ var directory = {
         } else if (dest != '..') {
             this.segments.push(dest);
         }
+        readme();
     },
     toString: function() {
-        return this.segments.join('/').replace(/\/\/+/g, '/');
+        return (this.segments.join('/') + '/').replace(/\/\/+/g, '/');
     }
 };
 var token = '{{ csrf_token() }}';

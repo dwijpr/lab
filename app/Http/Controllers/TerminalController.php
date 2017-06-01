@@ -18,6 +18,7 @@ class TerminalController extends Controller
             $readme = $readme[0];
             $content = file_get_contents($readme);
             if (pathinfo($readme)['extension'] == 'txt') {
+                $content = str_replace(' ', '&nbsp;', $content);
                 $content = nl2br($content);
             }
             $response = [
