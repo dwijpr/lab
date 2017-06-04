@@ -3,12 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use stdClass;
+use stdClass, Exception;
 
 class TerminalController extends Controller
 {
     // var $path = "/var/www/data"; // if using docker
     var $path = "D:/data";
+
+    public function mkdir() {
+        $directory = request()->directory;
+        $name = request()->name;
+        $path = $this->path.$directory.$name;
+        $response = [
+            'success' => false,
+        ];
+        try {
+            if (mkdir($path)) {
+                $response = [
+                    'success' => true,
+                ];
+            }
+        } catch (Exception $e) {
+            $response['error'] = $e->getMessage();
+        }
+        return response()->json($response);
+    }
 
     public function data($path) {
         return response()->file($this->path.$path);
