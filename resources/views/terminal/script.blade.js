@@ -79,16 +79,18 @@ function executeCommand(command) {
             args.push(parts[i]);
         }
     }
-    if (programs.indexOf(program) != -1) {
-        switch (program) {
-            @foreach ($programs as $program => $desc)
-            case '{{ $program}}':
-                @include('terminal.script.program.'.$program);
-                break;
-            @endforeach
-        }
-    } else {
-        unknownCommand(command);
+    switch (program) {
+        @foreach ($programs as $program => $desc)
+        case '{{ $program}}':
+            @include('terminal.script.program.'.$program);
+            break;
+        @endforeach
+        default:
+            if (['git'].indexOf(program) != -1) {
+                @include('terminal.script.program.cli');
+            } else {
+                unknownCommand(command);
+            }
     }
 }
 

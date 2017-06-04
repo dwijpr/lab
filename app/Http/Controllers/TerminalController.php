@@ -10,6 +10,23 @@ class TerminalController extends Controller
     // var $path = "/var/www/data"; // if using docker
     var $path = "D:/data";
 
+    public function cli() {
+        $directory = request()->directory;
+        $command = request()->command;
+        $path = $this->path.$directory;
+        chdir($path);
+        $output = shell_exec("pwd");
+        $output = shell_exec($command);
+        if ($output) {
+            $output = str_replace(' ', '&nbsp;', $output);
+            $output = nl2br($output);
+            return response()->json([
+                'success' => true,
+                'output' => $output,
+            ]);
+        }
+    }
+
     public function mkdir() {
         $directory = request()->directory;
         $name = request()->name;
