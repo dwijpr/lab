@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/islam', 'IslamController@index');
+Route::get('/islam/quran', 'QuranController@index');
+Route::get('/islam/shalat', 'ShalatController@index');
+
 Route::get('/cv', 'CVController@index');
 
 Route::get('/', 'TerminalController@index');
