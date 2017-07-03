@@ -1,0 +1,90 @@
+html {
+    font-family: 'Raleway', Sans-Serif;
+    font-weight: 300;
+    font-size: 1.275em;
+}
+body {
+    background: white;
+    color: black;
+}
+
+
+
+.text-editor-tab {
+    position: relative;
+    padding: 12px;
+    padding-top: 0px;
+    width: 100%;
+}
+
+.text-editor-tab > .title {
+    position: absolute;
+    top: -67px;
+    right: 48px;
+    padding: 12px;
+    text-align: right;
+}
+.text-editor-tab > .title > h3 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 12px 48px;
+    background: #222;
+    border: {{ $border }};
+    z-index: 1;
+}
+.text-editor-tab > .title > h3 {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+.text-editor-tab .closer {
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    background: #222;
+    width: 100%;
+    height: 8px;
+    z-index: 1;
+}
+
+.text-editor-tab > .body {
+    position: relative;
+    padding: 64px 32px;
+    padding-left: 128px;
+    padding-bottom: 72px;
+    border-radius: 12px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border: {{ $border }};
+}
+.text-editor-tab > .body h3 {
+    margin: 0;
+}
+.text-editor-tab > .body > .editor-content {
+    position: relative;
+    border-left: 2px dotted #333;
+    padding-left: 64px;
+}
+.text-editor-tab > .body > .editor-content .number {
+    position: relative;
+}
+.text-editor-tab > .body > .editor-content .number > span {
+    position: absolute;
+    top: 7px;
+    right: 115%;
+}
+
+.number {
+    font-family: monospace;
+}
+.experience .experience-item {
+    margin-bottom: 48px;
+}
+
+b.badge {
+    background: rgba(255, 255, 255, .7);
+    border-radius: 50%;
+    padding: 3px 6px;
+    color: #444;
+    font-size: 85%;
+}

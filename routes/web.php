@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/cv', 'CVController@index');
+
 Route::get('/', 'TerminalController@index');
 
 Route::resource('/todo', 'ToDoController');
