@@ -5,7 +5,7 @@
         padding: 16px 64px;
         position: absolute;
         top: -22px;
-        left: 252px;
+        left: 250px;
     ">Dwi Prabowo</h1>
     <div style="
         position: absolute;

@@ -8,18 +8,16 @@ body {
     color: black;
 }
 
-
-
 .text-editor-tab {
     position: relative;
     padding: 12px;
-    padding-top: 0px;
+    padding-top: 24px;
     width: 100%;
 }
 
 .text-editor-tab > .title {
     position: absolute;
-    top: -67px;
+    top: -41px;
     right: 48px;
     padding: 12px;
     text-align: right;
@@ -29,7 +27,6 @@ body {
     display: inline-block;
     margin: 0;
     padding: 12px 48px;
-    background: #222;
     border: {{ $border }};
     z-index: 1;
 }
@@ -41,7 +38,7 @@ body {
     position: absolute;
     bottom: -5px;
     left: 0px;
-    background: #222;
+    background: white;
     width: 100%;
     height: 8px;
     z-index: 1;
@@ -93,4 +90,9 @@ b.badge {
     display: inline-block;
     padding-left: 12px;
     padding-bottom: 12px;
+}
+
+code {
+    font-family: monospace;
+    font-size: .85em;
 }

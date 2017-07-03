@@ -1,5 +1,5 @@
 <?php
-$border = '3px solid #333';
+$border = '1px solid #333';
 ?>
 
 @extends('layout.html')
