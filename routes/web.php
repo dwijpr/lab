@@ -17,6 +17,7 @@ Route::resource('/todo', 'ToDoController');
 Route::post('/todo/done/{todo}', 'ToDoController@done');
 Route::post('/todo/undone/{todo}', 'ToDoController@undone');
 
+Route::post('/terminal/code', 'TerminalController@code');
 Route::post('/terminal/cli', 'TerminalController@cli');
 Route::post('/terminal/mkdir', 'TerminalController@mkdir');
 Route::get(

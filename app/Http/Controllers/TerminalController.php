@@ -8,7 +8,16 @@ use stdClass, Exception;
 class TerminalController extends Controller
 {
     // var $path = "/var/www/data"; // if using docker
-    var $path = "D:/data";
+    var $path = "D:/workspace/quran";
+
+    public function code() {
+        $file = request()->file;
+        $directory = request()->directory;
+        $path = $this->path.$directory.$file;
+        return response()->json([
+            'content' => file_get_contents($path),
+        ]);
+    }
 
     public function cli() {
         $directory = request()->directory;

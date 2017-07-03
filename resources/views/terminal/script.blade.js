@@ -65,6 +65,7 @@ $programs = [
     'cd'    => 'Change the shell working directory',
     'play'  => 'Run multimedia file, like video or audio file',
     'mkdir' => 'Create directory',
+    'code'  => 'Code Editor',
 ];
 ?>
 
@@ -86,7 +87,12 @@ function executeCommand(command) {
             break;
         @endforeach
         default:
-            if (['git'].indexOf(program) != -1) {
+            if ([
+                'git'
+                , 'docker-compose'
+                , 'laravel'
+                , 'php'
+            ].indexOf(program) != -1) {
                 @include('terminal.script.program.cli');
             } else {
                 unknownCommand(command);

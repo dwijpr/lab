@@ -12,6 +12,18 @@
         </div>
     </div>
 </div>
+<div
+    style="
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        height: 100vh;
+        width: 100vw;
+        overflow: auto;
+        display: none;
+    "
+    id="code"
+></div>
 <div class="template">
     <div class="command">
         <textarea class="command-input" spellcheck="false" rows="1"></textarea>
