@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ config('app.name') }} - @yield('title')</title>
+    <title>@yield('title')</title>
     <?php
         $raleway = [
             '100' => 'Thin',

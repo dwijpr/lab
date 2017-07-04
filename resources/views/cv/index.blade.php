@@ -4,7 +4,7 @@ $border = '1px solid #333';
 
 @extends('layout.html')
 
-@section('title', 'Dwi Prabowo')
+@section('title', 'CV - Dwi Prabowo')
 
 @section('style')
 <style>
@@ -18,16 +18,14 @@ $border = '1px solid #333';
         position: relative;
         margin: 0 auto;
         padding: 16px;
-        /*border: 1px solid #0f0;*/
-        width: 1158px;
-        height: 1656px;
+        width: 1000px;
     "
 >
-    <div style="padding: 64px;">
+    <div style="padding: 48px;">
         <div style="position: relative;">
             @include('cv.header')
         </div>
-        <div style="position: relative;top: 300px;">
+        <div style="position: relative;top: 270px;">
             @include('cv.body')
         </div>
     </div>
