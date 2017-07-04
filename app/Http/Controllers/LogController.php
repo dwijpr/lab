@@ -8,9 +8,10 @@ use App\Log;
 class LogController extends Controller
 {
     public function index() {
-        $logs = Log::orderBy('id', 'desc')->get();
+        $logs_grouped = Log::orderBy('created_at', 'desc')->get()
+            ->groupBy('ip');
         return view('log.index', [
-            'logs' => $logs,
+            'logs_grouped' => $logs_grouped,
         ]);
     }
 }
