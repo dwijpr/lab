@@ -59,6 +59,7 @@ function unknownCommand(command) {
 <?php
 $programs = [
     'help'  => 'Display this information',
+    /*
     'todo'  => 'list of todo',
     'pwd'   => 'Print the name of the current working directory',
     'ls'    => 'Display directory stack',
@@ -66,6 +67,7 @@ $programs = [
     'play'  => 'Run multimedia file, like video or audio file',
     'mkdir' => 'Create directory',
     'code'  => 'Code Editor',
+    */
 ];
 ?>
 
@@ -87,6 +89,7 @@ function executeCommand(command) {
             break;
         @endforeach
         default:
+            /*
             if ([
                 'git'
                 , 'docker-compose'
@@ -95,8 +98,12 @@ function executeCommand(command) {
             ].indexOf(program) != -1) {
                 @include('terminal.script.program.cli');
             } else {
+            */
                 unknownCommand(command);
+            /*
             }
+            */
+
     }
 }
 
