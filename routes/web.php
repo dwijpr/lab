@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/log', 'LogController@index');
+
 Route::get('/islam', 'IslamController@index');
 Route::get('/islam/quran', 'QuranController@index');
 Route::get('/islam/shalat', 'ShalatController@index');
