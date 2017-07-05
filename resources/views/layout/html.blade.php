@@ -45,5 +45,6 @@
 </head>
 <body>
     @yield('content')
+    @include('google.analyticstracking')
 </body>
 </html>

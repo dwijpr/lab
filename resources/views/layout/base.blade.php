@@ -36,5 +36,6 @@
         <script>
         @yield('script')
         </script>
+        @include('google.analyticstracking')
     </body>
 </html>
