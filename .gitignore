@@ -13,5 +13,6 @@ npm-debug.log
 *.sublime*
 /laradock
 *.pem
+ssh.sh
 
 cv.pdf
