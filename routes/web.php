@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/download/sqlite', 'DownloadController@sqlite');
+
 Route::get('/log', 'LogController@index');
 
 Route::get('/islam', 'IslamController@index');
