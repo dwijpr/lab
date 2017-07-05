@@ -1,31 +1,8 @@
-@extends('layout.app')
+@extends('layout.base')
 
 @section('style')
-    <style>
-        #main-menu {
-            position: fixed;
-            top: 0px;
-            padding: 8px;
-            width: 100%;
-            background: white;
-            border-bottom: 1px solid #eaeaea;
-            height: 50px;
-            z-index: 2;
-        }
-        body {
-            padding-top: 50px;
-        }
-        .form-control {
-            display: inline-block;
-        }
-        .sura-wrapper {
-            padding: 8px;
-        }
-        .sura {
-            padding: 8px;
-            border: 1px solid #cecece;
-        }
-    </style>
+    @parent
+    @include('islam.quran.style')
 @endsection
 
 @section('content')

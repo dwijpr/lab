@@ -15,6 +15,11 @@ class CreateAyasTable extends Migration
     {
         Schema::create('ayas', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('aya_id')->unsigned()->index();
+            $table->integer('sura_id')->unsigned()->index();
+            $table->text('text');
+            $table->text('terjemahan');
+            $table->text('jalalayn');
             $table->timestamps();
         });
     }

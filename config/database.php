@@ -39,6 +39,34 @@ return [
             'prefix' => '',
         ],
 
+        'andi' => [
+            'indopak' => [
+                'driver' => 'sqlite',
+                'database' => database_path('andi-quran/al-quran-indopak'),
+                'prefix' => '',
+            ],
+            'terjemahan' => [
+                'driver' => 'sqlite',
+                'database' => database_path('andi-quran/terjemahan'),
+                'prefix' => '',
+            ],
+            'jalalayn' => [
+                'driver' => 'sqlite',
+                'database' => database_path('andi-quran/jalalayn'),
+                'prefix' => '',
+            ],
+            'latin' => [
+                'driver' => 'sqlite',
+                'database' => database_path('andi-quran/latin'),
+                'prefix' => '',
+            ],
+            'kata' => [
+                'driver' => 'sqlite',
+                'database' => database_path('andi-quran/kata'),
+                'prefix' => '',
+            ],
+        ],
+
         'mysql' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
