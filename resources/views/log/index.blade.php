@@ -11,7 +11,26 @@
                             <td>
                                 <b>{{ $current_ip }}</b>
                             </td>
-                            <td>{{ dump($ips[$current_ip]) }}</td>
+                            <?php
+                                $detail = $ips[$current_ip];
+                                $detail = [
+                                    @$detail['city']
+                                    ?'<b>' . $detail['city'] . '</b>'
+                                    :false,
+                                    $detail['region'],
+                                    @$detail['country']
+                                    ?'<b>' . $detail['country'] . '</b>'
+                                    :false,
+                                    $detail['postal'],
+                                ];
+                                foreach ($detail as $i => $el) {
+                                    if (!$el) {
+                                        unset($detail[$i]);
+                                    }
+                                }
+                                $detail = implode(', ', $detail);
+                            ?>
+                            <td>{!! $detail !!}</td>
                             <td class="text-right">
                                 <span class="badge">
                                     {{ count($logs) }}
