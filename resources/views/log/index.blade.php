@@ -11,14 +11,18 @@
                             <td>
                                 <b>{{ $current_ip }}</b>
                             </td>
+                            <td>{{ dump($ips[$current_ip]) }}</td>
                             <td class="text-right">
                                 <span class="badge">
                                     {{ count($logs) }}
                                 </span>
                             </td>
+                            <td>
+                                <i class="fa fa-chevron-down"></i>
+                            </td>
                         </tr>
                         <tr style="display: none;">
-                            <td colspan="2">
+                            <td colspan="3">
                                 <table class="table">
                                     <thead>
                                         <tr>
