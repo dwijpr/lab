@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/upload/sqlite', 'UploadController@sqlite');
+Route::post('/upload/sqlite', 'UploadController@sqlite');
+
 Route::get('/download/sqlite', 'DownloadController@sqlite');
 
 Route::get('/log', 'LogController@index');

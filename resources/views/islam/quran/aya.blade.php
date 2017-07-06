@@ -27,11 +27,10 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
+            <!--
             <div class="title">
                 <h1>
-                    <!--
                     {{ $ayas->first()->sura->translation() }}
-                    -->
                     &nbsp;
                     <span
                         class="pull-right"
@@ -45,6 +44,7 @@
                 </h1>
                 <hr>
             </div>
+            -->
             @foreach ($ayas as $aya)
                 <div
                     dir="rtl"

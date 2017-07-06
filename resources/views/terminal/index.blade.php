@@ -34,40 +34,6 @@
         Your browser does not support the audio element.
     </audio>
 </div>
-<div style="
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    background: #333;
-">
-    <h4
-        class="text-right"
-        style="padding-right: 16px;"
-    >
-        <a 
-            title="Access Log"
-            href="{{ url('/log') }}">
-            <i class="fa fa-list-ul"></i>
-        </a>
-        <a 
-            title="Github"
-            href="http://github.com/dwijpr" target="_blank">
-            <i class="fa fa-github"></i>
-        </a>
-        <a
-            title="LinkedIn"
-            href="http://www.linkedin.com/in/dwiprabowo" target="_blank">
-            <i class="fa fa-linkedin"></i>
-        </a>
-        <a 
-            title="CV"
-            href="{{ url('/cv') }}"
-            target="_blank" 
-        >
-            <i class="fa fa-file-o"></i>
-        </a>
-    </h4>
-</div>
 @endsection
 
 @section('script')
