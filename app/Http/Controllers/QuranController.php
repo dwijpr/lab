@@ -16,4 +16,20 @@ class QuranController extends Controller
             'aya_count' => $aya_count,
         ]);
     }
+
+    public function aya(Sura $sura, $aya_start, $aya_end = false) {
+        if ($aya_end) {
+            $ayas = $sura->ayas()->where([
+                ['aya_id', '>=', $aya_start],
+                ['aya_id', '<=', $aya_end],
+            ])->get();
+        } else {
+            $ayas = $sura->ayas()->where([
+                ['aya_id', '=', $aya_start],
+            ])->get();
+        }
+        return view('islam.quran.aya', [
+            'ayas' => $ayas,
+        ]);
+    }
 }

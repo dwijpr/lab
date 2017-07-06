@@ -16,7 +16,10 @@ Route::get('/download/sqlite', 'DownloadController@sqlite');
 Route::get('/log', 'LogController@index');
 
 Route::get('/islam', 'IslamController@index');
+
 Route::get('/islam/quran', 'QuranController@index');
+Route::get('/islam/quran/{sura}/{aya_start}/{aya_end?}', 'QuranController@aya');
+
 Route::get('/islam/shalat', 'ShalatController@index');
 
 Route::get('/cv', 'CVController@index');
