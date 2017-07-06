@@ -116,6 +116,7 @@
                                     </button>
                                     -->
                                 </div>
+                                <!--
                                 <div class="form-group">
                                     <div class="input-group">
                                         {{ Form::text('number', '', [
@@ -135,6 +136,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                -->
                             </div>
                             <div class="action-hidden">
                                 <br>

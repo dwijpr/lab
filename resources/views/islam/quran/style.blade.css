@@ -21,3 +21,6 @@ body {
     padding: 8px;
     border: 1px solid #cecece;
 }
+.action-hidden {
+    white-space: nowrap;
+}

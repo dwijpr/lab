@@ -25,7 +25,7 @@
             bottom: 0px;
             padding-bottom: 16px;
             font-weight: normal;
-            z-index: 2;
+            z-index: 3;
         ">
             <hr style="margin-top: 0px;">
             <a href="{{ url('/') }}">
