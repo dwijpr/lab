@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/salt', 'SaltController@index');
+
 Route::get('/upload/sqlite', 'UploadController@sqlite');
 Route::post('/upload/sqlite', 'UploadController@sqlite');
 
