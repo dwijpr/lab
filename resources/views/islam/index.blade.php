@@ -8,6 +8,9 @@
             <hr>
             <ul>
                 <li>
+                    <a href="{{ url('/islam/arab') }}">Arab Quran</a>
+                </li>
+                <li>
                     <a href="{{ url('/islam/quran') }}">Quran</a>
                 </li>
                 <li>

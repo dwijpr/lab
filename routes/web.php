@@ -22,6 +22,9 @@ Route::get('/log', 'LogController@index');
 
 Route::get('/islam', 'IslamController@index');
 
+Route::get('/islam/arab', 'ArabController@index');
+Route::get('/islam/arab/topik/{number}', 'ArabController@topik');
+
 Route::get('/islam/quran', 'QuranController@index');
 Route::get('/islam/quran/{sura}/{aya_start}/{aya_end?}', 'QuranController@aya');
 

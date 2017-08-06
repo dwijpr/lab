@@ -1,0 +1,6 @@
+.arab {
+    direction: rtl;
+    -webkit-locale: "ar";
+    font-family: qalammajeed;
+    font-size: 2em;
+}
