@@ -87,6 +87,94 @@
             </p>
 
             <h2>Mengenalkan Teman</h2>
+
+            <p>
+                Bayangkan disebelah anda Ada, Febrianti dan Sutanto. Kemudian datang
+                temain lain yang belum kenal Febrianti dan Sutanto, maka Anda akan
+                berkata:
+                <span class="arab">هذا</span> Sutanto (hadzaa Sutanto),
+                <span class="arab">هذه</span> Febrianti (hadzihi Febrianti).
+                Ini Sutanto, ini Febrianti.
+            </p>
+
+            <p>
+                Untuk kata benda alam (isim alam) seperti mobil, kantor, perpustakaan,
+                buku dll, maka cara yang paling mudah adalah dengan melihat apakah
+                ada ta marbutoh ة atau ـة (ta tertutup) pada akhir katanya.
+                Jika ada ta marbutoh, maka kata ini termasuk jenis perempuan.
+            </p>
+
+            <p>
+                Contoh:
+                <br>
+                <span class="arab">شجرة</span> syajaratun = pohon
+                <span class="arab">بقرة</span> baqoratun = sapi betina
+                <span class="arab">فاطمة</span> fatimah = nama orang
+            </p>
+
+            <p>
+                Ada beberapa tanda-tanda lain (yang lebih jarang muncul) untuk
+                isim alam jenis perempuan, tetapi pada kesempatan kali ini kita
+                hanya tampilkan satu yaitu adanya ta marbutoh. Tanda ini paling
+                sering muncul.
+            </p>
+
+            <h2>Nakiroh dan Ma'rifah</h2>
+
+            <p>
+                Sekarang kita masuk ke topik baru. Pada saat kita baca
+                <span class="arab">ذلك الكتاب</span> dzalika al-kitaabu (buku itu),
+                kata <span class="arab">كتاب</span> (ktaabu) ditambahkan AL
+                (<span class="arab">الـ</span>) menjadi <span class="arab">الــكتاب</span>
+                (al-kitaabu), penambahan AL ini maksudnya adalah menjadikan suatu
+                kata benda menjadi sesuatu yang diketahui (definitif), sama halnya
+                dalam bahasa Inggris, untuk memberitakan sesuatu yang sudah diketahui
+                ditambah THE.
+            </p>
+
+            <p>
+                Misalkan:
+                <br>
+                I read a book <span class="arab">أقرأ كتابا</span> aqra-u kitaaban
+                I read the book <span class="arab">أقرأ الكتاب</span> aqra-u al-kitaaba
+            </p>
+
+            <p>
+                Pada contoh pertama, si pendengar belum mengetahui buku apa yang
+                dimaksud oleh si pembicara. Sedangkan pada contoh kedua si pembicara
+                yakin si pendengar sudah sama-sama tahu buku apa yang sedang dia baca.
+            </p>
+
+            <p>
+                Pada contoh pertama, kata kitaab disebut nakiroh (artinya belum definitif,
+                belum diketahui oleh yang mendengar object yang jelas). Sedangkan
+                pada contoh kedua disebut ma'rifah (definitif) yang artinya pembicara
+                yakin pendengar tahu secara pasti (definitif) object mana yang disebut.
+            </p>
+
+            <p>
+                Kembali ke surat Al-Baqaroh:
+                <span class="arab">ذلك الكتاب</span> dzaalika al-kitaabu
+            </p>
+
+            <p>
+                maka kitaab (buku) disini ma'rifah, artinya pembaca aya ini diasumsikan
+                sudah tahu kitaab apa yang dimaksud. Dzalika Al-kitaabu = buku itu,
+                atau bisa dibaca buku (yang kalian sudah tahu tentangnya) itu. Menurut
+                tafsir, maksud dari "buku itu" adalah Al-Quran itu sendiri.
+            </p>
+
+            <p>
+                Demikian pembahasan ringkas Ma'rifah dan Nakiroh. Insya Allah akan
+                kita lanjutkan lagi pada minggu ini atau minggu depan. Jika ada
+                yang ingin dikomentari, ditanyakan, memberikan usulan, atau perbaikan,
+                silahkan klik comments dibawah. Syukron katsiron.
+            </p>
+
+            <p>
+                Topik berikut Insya Allah: Bagaimana struktur kalimat yang sempurna
+                dalam bahasa Arab.
+            </p>
         </div>
     </div>
 </div>
